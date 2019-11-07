@@ -16,8 +16,6 @@ ubicada en la URL:
  los datos correspondientes.
 
 ### Archivos
-El proyecto está completo en la ruta:
-	bitbucket
 
 Se incluyeron todos los archivos generados excepto node_modules.
 
