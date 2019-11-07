@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "init": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "preinstall": "npm install -g @angular/cli@latest",
     "postinstall": "ng build && mv dist/* .",
+    "start": "node app.js",
     "e2e": "ng e2e"
   },
   "private": true,
