@@ -1,1 +1,46 @@
-<h1 mat-dialog-title>Hi {{data.name}}</h1>
+<div class="table-responsive class="text-center>
+<table class="table table-borderless">
+        <thead>
+          <tr class="table-success">
+            <th class="text-center">FICHA TÉCNICA</th>
+          </tr>
+          <tr class="table-success">
+              <th>
+                  <div class="text-center"><img class="rounded-circle" src="{{data.image}}" style="width:100px;height:120px;" ></div>
+                </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-success">
+            <td class="text-center">{{data.name}} {{data.first_surname}} {{data.second_surname }}</td>
+          </tr>
+          <tr class="table-success">
+            <td class="text-center">{{data.position}}</td>
+          </tr>
+          <tr>
+            <td class="text-center">FECHA DE NACIMIENTO</td> 
+          </tr>
+          <tr>
+            <td class="text-center">{{data.birthday}}</td>
+          </tr>
+          <tr>
+            <td class="text-center">LUGAR DE NACIMIENTO</td> 
+          </tr>
+          <tr>
+            <td class="text-center">{{data.birth_place}}</td>
+          </tr>
+          <tr>
+            <td class="text-center">PESO</td>
+          </tr>
+          <tr>
+            <td class="text-center">{{data.weight}}kg</td>
+          </tr>
+          <tr>
+            <td class="text-center">ALTURA</td>
+          </tr>
+          <tr>
+            <td class="text-center">{{data.height}}m</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

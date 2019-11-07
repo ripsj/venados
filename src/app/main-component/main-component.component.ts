@@ -15,6 +15,10 @@ export class MainComponentComponent implements OnInit {
   jugadores = [];
   juegosFechaMal = [];
   juegos = [];
+  juegosAscenso = [];
+  juegosCopa = [];
+  juegosAmistoso = [];
+  liga = 'Ascenso MX';
   options = {
     "Accept": "application/json;"
   };
@@ -24,6 +28,7 @@ export class MainComponentComponent implements OnInit {
   }
 
   ngOnInit() {
+    
   }
 
   @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
@@ -52,15 +57,17 @@ export class MainComponentComponent implements OnInit {
           headers: {
             Accept: 'application/json'
           }
-        }).then((response) => {
-          //this.juegosFechaMal = response.data.data.games.array.forEach(element => {
-            //console.log(element.datetime);
-            //element.datetime = element.datetime.split('T')[0];
-            //console.log(element.datetime);
-          //});
-          
+        }).then((response) => {        
           this.juegos = response.data.data.games;
-          console.log(this.juegos);
+          this.juegosAscenso = this.juegos.filter(function(e) {
+            return e.league === 'Ascenso MX';
+          });
+          this.juegosCopa = this.juegos.filter(function(e) {
+            return e.league === 'Copa MX';
+          });
+          this.juegosAmistoso = this.juegos.filter(function(e) {
+            return e.league === 'Amistoso';
+          });
         });
         this.sidenav.close();
         this.variable = 1;
@@ -106,7 +113,7 @@ export class MainComponentComponent implements OnInit {
   openModal(jugador): void {
     console.log(jugador);
       const dialogRef = this.dialog.open(ModalJugadorComponent, {
-        width: '2500px',
+        width: '500px',
         data: {name: jugador.name, birth_place: jugador.birth_place,
           birthday: jugador.birthday, first_surname: jugador.first_surname,
           height: jugador.height, image: jugador.image,
