@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "preinstall": "npm install -g angular-cli",
+    "preinstall": "npm install -g @angular/cli@latest",
     "postinstall": "ng build && mv dist/* .",
     "e2e": "ng e2e"
   },
