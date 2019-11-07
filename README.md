@@ -1,27 +1,34 @@
-# Venados
+### Versiones
+Angular 6
+node 12
+Moesif Orign & CORS Changer 0.4
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
+### Servidor
+El servicio se encuentra disponible en la siguiente ruta:
+	https://venados.netlify.com/
 
-## Development server
+Es importante tener la política CORS desactivada. Para esto podemos instalar en el navegador Chrome la extension:
+	Moesif Orign & CORS Changer 0.4
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ubicada en la URL:
+	https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=en-US
+ además debemos asegurarnos que la extensión se encuentra encendida y recargar la página para que esta muestre 
+ los datos correspondientes.
 
-## Code scaffolding
+### Archivos
+El proyecto está completo en la ruta:
+	bitbucket
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Se incluyeron todos los archivos generados excepto node_modules.
 
-## Build
+### Breve descripción
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Entrando a la aplicación es la pantalla de bienvenida. Por defecto viene limpia.
+Para desplegar información debemos seleccionar la barra de navegación en la esquina
+superior izquierda. En la barra estarán disponibles 3 opciones: Home, Estadísticas,
+Jugadores.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+En home se encuentran todos los partidos obtenidos del endpoint separados por torneo.
+En estadísticas no se muestra nada ya que la respuesta del endpoint es vacía.
+En jugadores se encuentran todos los jugadores y entrenadores. Podemos ver el detalle
+ de cada uno haciendo click en la imagen del jugador.
